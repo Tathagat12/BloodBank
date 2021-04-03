@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Digital Bload Bank</title>
+        <link rel="stylesheet" href="asset/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="asset/images/logo .jpg" class="logo">
+                <nav>
+                    <ul id="menuList">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Donate</a></li>
+                        <li><a href="">Search Bload</a></li>
+                        <li><a href="">Gallery</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </nav>
+                <img src="asset/images/menu.png" class="menu-icon" 
+                onclick="togglemenu()">
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <h2>Digital <br>Bload Bank</h2>
+                    <h3>Donate Bload and save life !</h3>
+                    <p>Get Your Requred Bload </p>
+                    <h4>We will help you </h4>
+                    <button type="button">Search Bload<img src="asset/images/arrow.png"></button>
+
+
+                </div>
+                <div class="col-2">
+                    <img src="asset/images/bv.png" class="controller">
+                    <div class="color-box"></div>
+                    <div  class="add-btn">
+                        <img src="asset/images/add.png">
+                        <p><small>Donate Now</small></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            <script>
+        var menuList=document.getElementById("menuList")
+        menuList.style.maxHeight="0px"
+        function togglemenu(){
+            if(menuList.style.maxHeight=="0px")
+            {
+                menuList.style.maxHeight="130px"
+            }
+            else
+            {
+                menuList.style.maxHeight="0px"
+            }
+        }
+    </script>
+    </body>
+
+</html>
