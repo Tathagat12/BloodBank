@@ -3,8 +3,10 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, intial-scale=1.0">
-        <title>Digital Blood Bank</title>
+        <title>Digital Bload Bank</title>
         <link rel="stylesheet" href="asset/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        
     </head>
     <body>
         <div class="container">
@@ -15,7 +17,7 @@
                         <li><a href="">Home</a></li>
                         <li><a href="">About us</a></li>
                         <li><a href="">Donate</a></li>
-                        <li><a href="">Search Blood</a></li>
+                        <li><a href="">Search Bload</a></li>
                         <li><a href="">Gallery</a></li>
                         <li><a href="">Contact</a></li>
                     </ul>
@@ -25,14 +27,15 @@
             </div>
             <div class="row">
                 <div class="col-1">
-                    <h2>Digital <br>Blood Bank</h2>
-                    <h3>Donate Blood and save life !</h3>
-                    <p>Get Your Requred Blood </p>
-                    <h4>We will help you !</h4>
-                    <button type="button">Search Bload<img src="asset/images/arrow.png"></button>
+                    <h2>Digital <br>Bload Bank</h2>
+                    <h3>Donate Bload and save life !</h3>
+                    <p>Get Your Requred Bload </p>
+                    <h4>We will help you </h4>
+                    <button type="button" id="search">Search Bload<img src="asset/images/arrow.png"></button>
 
 
                 </div>
+                
                 <div class="col-2">
                     <img src="asset/images/bv.png" class="controller">
                     <div class="color-box"></div>
@@ -44,7 +47,27 @@
 
             </div>
         </div>
-            <script>
+        <div class="popup">
+            <div class="popup-content">
+                <img src="asset/images/gf.gif" class="controller1">
+                <i class="fa fa-times close" id="close" aria-hidden="true"></i>
+                <input type="text" placeholder="Enter your blood group"> 
+                <input type="text" placeholder="Enter your location">
+                <button  type="button" id="go"><i class="fa fa-search  sr" aria-hidden="true"></i></button> 
+                
+
+            </div>
+
+        </div>
+     
+        <script>
+        document.getElementById("search").addEventListener('click',function(){
+            document.querySelector(".popup").style.display='flex';
+        })
+        document.getElementById("close").addEventListener('click',function(){
+            document.querySelector(".popup").style.display='none';
+        })
+        
         var menuList=document.getElementById("menuList")
         menuList.style.maxHeight="0px"
         function togglemenu(){
@@ -58,6 +81,7 @@
             }
         }
     </script>
+
     </body>
 
 </html>
